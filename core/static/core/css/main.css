@@ -1,0 +1,44 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+/*Estilos Indice*/
+li{
+    font-size: 15px;
+    font-weight: 500;
+}
+li:hover{
+    border-radius: 3px;
+    background-color: gray;
+}
+.cita{
+    background-color: gray;
+    border-radius: 3px;
+}
+.cita:hover{
+    background-color: aqua;
+    box-shadow: 3px 3px 0px 0px black;
+}
+/*Estilos titulo*/
+.titulo{
+    color: white;
+    font-size: 45px;
+    font-weight: 800;
+}
+.divtitle{
+    background-color: black;
+}
+/*Estilos titulo encima imagenes*/
+.subtitulo{
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: 
+    3px 3px 1px red,
+    5px 5px 2px yellow,
+    8px 8px 3px blue;
+    ;
+}

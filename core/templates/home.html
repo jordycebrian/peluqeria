@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+
+<section>
+  <!--Inicio barra de horaio-->
+  <nav class="text-center navbar navbar-expand-lg bg-primary">
+    <div class="m-auto"  style="font-family: 'Lora';"><h5 class="text-white">Lunes a Viernes de 10am a 10pm, Sabado y Domingo de 10am a 3pm</h5></div>
+  </nav>
+  <!--fin barra de horaio-->
+  <!--Inicio portada imagenes-->
+  <div class="text-center">
+    <div class="row">
+      <div class="col">
+        <img src="{% static 'core/img/corte_uno.jpg' %}" style="opacity: 0.5;" class="img-fluid m-3" alt="...">
+      </div>
+      <div class="col">
+        <img src="{% static 'core/img/corte_dos.jpg' %}" style="opacity: 0.5;" class="img-fluid" alt="...">
+      </div>
+      <div class="col">
+        <img src="{% static 'core/img/corte_tres.jpg' %}" style="opacity: 0.5;" class="img-fluid" alt="...">
+      </div>
+    </div>
+  </div>
+
+  <!--Inicio barra de informacio-->
+  <div class="text-center mt-5">
+    <h1 class="display-4" style="font-family: 'Lora';">Peluqueria DG</h1>
+    <P>Los cortes más modernos, porque un buen corte de pelo puede acerte resaltar a donde quiera que vayas
+      <br>
+        Nosotros te ayudaremos, somos expertos en el arte del estilismo,
+      <br>
+        ademas realizamos mantenimineto de barba, puedes hechar un vistaso abajo.
+    </P>
+  </div>
+  <!--fin barra de informacio-->
+
+  <!--Inicio agendar cita-->
+  <div class="text-center bg-primary">
+    <div class="pt-4">
+      <h1 style="font-family: 'Lora';" >Consigue tu cita y evita la espera</h1>
+      <button class="btn cita m-5"><p style="text-decoration: none; font-family: 'Lora';"> <a style="text-decoration: none; color: black;font-family: 'Lora';" href="{% url 'citas' %}">Da click aqui para agendar tu cita</a> </p></button>
+    </div>
+  </div>
+  <!--fin agendar cita-->
+
+  <!--Inicio imagenes de cortes-->
+  <div class="container text-center mt-5">
+    <h1 class="display-4" style="font-family: 'Lora';" >Nuestros Estilos</h1>
+    <div class="container text-center"></div>
+      <div class="row">
+        <div class="col">
+          <img src="{% static 'core/img/barba.jpg' %}"  style="height: 300px; opacity: 0.5;" alt="barbas" class=" img-fluid img-thumbnail">
+          <p>Barbas</p>
+        </div>
+        <div class="col">
+          <img src="{% static 'core/img/degradado.jpg' %}" style="height: 300px; opacity: 0.5;" alt="degradado" class="img-fluid img-thumbnail">
+          <p>Degradado</p>
+        </div>
+        <div class="col">
+          <img src="{% static 'core/img/pelolargo.jpg' %}" style="height: 300px; opacity: 0.5;" alt="pelo largo" class="img-fluid img-thumbnail">
+          <p>Pelo largo</p>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <img src="{% static 'core/img/clasico.jpg' %}" style="height: 300px; opacity: 0.5;" alt="clasio" class="img-fluid img-thumbnail">
+          <p>Clásico</p>
+        </div>
+        <div class="col">
+          <img src="{% static 'core/img/niños.jpg' %}" style="height: 300px; opacity: 0.5;" alt="niños" class="img-fluid img-thumbnail">
+          <p>Niños</p>
+        </div>
+        <div class="col">
+          <img src="{% static 'core/img/disminuidos.jpg' %}" style="height: 300px; opacity: 0.5;" alt="disminuciones" class="img-fluid img-thumbnail">
+          <p>Disminuciones</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--fin barra de informacio-->
+
+  <!--Inicio de fotos del local-->
+ <div class="text-center">
+  <h1 class="display-4" style="font-family: 'Lora';" >Nuestras Instalaciónes</h1>
+  <div class="row">
+    <div class="col">
+      <img src="{% static 'core/img/salonUno.jpg' %}" style="height: 300px; opacity: 0.5;" alt="salonUno" class="img-fluid img-thumbnail">
+    </div>
+    <div class="col">
+      <img src="{% static 'core/img/salonDos.jpg' %}" style="height: 300px; opacity: 0.5;" alt="salonDos" class="img-fluid img-thumbnail">
+    </div>
+    <div class="col">
+      <img src="{% static 'core/img/salonTres.jpg' %}" style="height: 300px; opacity: 0.5;" alt="salonTres" class="img-fluid img-thumbnail">
+    </div>
+  </div>
+  </div>
+    <!--Ubicación del local-->
+    <div class="text-center mt-5">
+      <h1 class="display-4" style="font-family: 'Lora';" >Ubicación del local</h1>
+      <div class="row">
+        <div class="col">
+          <iframe class="img" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d448.23529464479714!2d-98.06862479044958!3d26.004670845462584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1671744228920!5m2!1ses-419!2smx" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+</section>
+  <!--Fin ubicación del local-->
+{% endblock %}

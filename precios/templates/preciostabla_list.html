@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Precios{% endblock %}
+{% block content %}
+<section>
+  <h1 class="text-center mt-5" style="font-weight: 900; font-family: 'Lora';">Precios Peluquería DG</h1>
+  <div class="container mt-5">
+    <!--Mostrando los cortes-->
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" style="font-size: 30px; font-family: 'Lora';">Peluquria y Barberia</th>
+            <th class="text-center" scope="col" style="font-size: 30px; font-family: 'Lora';">Precio</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          {% for corte in cortes %}
+          <tr>
+            <td style="font-family: 'Lora';">{{corte.corte}}</td>
+            <td class="text-center" style="font-family: 'Lora';">{{corte.precio}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        
+      </table>
+
+  <h1 class="text-center mt-5" style="font-weight: 900; font-family: 'Lora';">Nuestras Ofertas</h1>
+  <div class="container mt-5">
+    <!--Mostrando los cortes-->
+      <table class="table">
+        <thead class="bg-success">
+          <tr>
+            <th scope="col" style="font-size: 30px; font-family: 'Lora';">Ofertas</th>
+          </tr>
+        </thead>
+        
+        <!--Mostrando ofertas-->
+        <tbody>
+          {% for oferta in ofertas %}
+          <tr>
+            <td class="text-center text-success" style="font-family: 'Lora';">{{oferta.oferta}}</td>
+          </tr>
+          <tr>
+            <td class="text-center" style="font-family: 'Lora';">{{oferta.descripcion}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        <!--fin de ofertas-->
+        
+      </table>
+  </div>
+</section>
+{% endblock %}

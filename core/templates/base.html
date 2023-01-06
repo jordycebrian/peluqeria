@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | Peluqueria DG</title>
+    {% load static %}
+    <!-- Estilos -->
+    <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'core/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'core/css/main.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'core/img/scissors.svg' %}" type="image/x-icon">
+
+    <!-- Fuentes -->
+    <link href="{% static 'core/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Inicio barra de navegacion-->
+    <nav class="text-center navbar navbar-expand-lg navbar-dark bg-dark">
+            <!--Inicio titulo-->
+            <div class="divtitle border">
+                <a class="navbar-brand m-auto" href="{% url 'home' %}"><h1 class="titulo" style="font-family: 'Lore';">Peluquería DG</h1></a>
+            </div>
+            <!--fin titulo-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ned" aria-controls="ned" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="ned">
+                <ul class="nav">
+                    <li class="indice nav-item {% if request.path == '/' %}border-bottom{% endif %}">
+                        <a class="nav-link text-white text-uppercase" href="{% url 'home' %}">Inicio</a>
+                    </li>
+                    <li class="indice nav-item {% if request.path == '/sobre_nosotros/' %}border-bottom{% endif %}">
+                        <a class="nav-link text-white text-uppercase" href="{% url 'sobre_nosotros' %}">Sobre Nosotros</a>
+                    </li>
+                    <li class="indice nav-item {% if request.path == '/citas/' %}border-bottom{% endif %}">
+                        <a class="nav-link text-white text-uppercase" href="{% url 'citas' %}">Citas</a>
+                    </li>
+                    <li class="indice nav-item {% if request.path == '/cortes/' %}border-bottom{% endif %}">
+                        <a class="nav-link text-white text-uppercase" href="{% url 'cortes' %}">Cortes</a>
+                    </li>
+                    <li class="indice nav-item {% if request.path == '/precios/' %}border-bottom{% endif %}">
+                        <a class="nav-link text-white text-uppercase" href="{% url 'precios' %}">Precios</a>
+                    </li>
+                    <li class="indice nav-item {% if request.path == '/blog/' %}border-bottom{% endif %}">
+                        <a class="nav-link text-white text-uppercase" href="{% url 'blog' %}">Blog</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <!--fin barra de navegacion-->
+    
+    
+    <!--Contenido-->
+    {% block content %}{% endblock %}
+    <!--Contenido-->
+
+    <!--Inicio Footer-->
+    <footer class="bg-dark mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5">
+                    <!--Inicio Tarjetas-->
+                    <div class="card s-100 bg-dark">
+                        <div class="card-body text-white">
+                            <h5 class="card-title text-center">Contacto</h5>
+                            <p class="card-text text-center">
+                                {% if LINK_EMAIL %}
+                                <a href="{{LINK_EMAIL}}" class="link">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-cirle fa-stack-2x"></i>
+                                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                                pelu_dg@hotmail.com
+                                {% endif %}
+                                <br>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-cirle fa-stack-2x"></i>
+                                    <i class="fa fa-telephone fa-stack-1x fa-inverse"></i>
+                                </span>
+                                990-202-2010-12
+                                <br>
+                                {% if LINK_FACEBOOK %}
+                                    <a href="{{LINK_FACEBOOK}}" class="link">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-cirle fa-stack-2x"></i>
+                                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>    
+                                        </span>
+                                    </a>
+                                    Peluqueria DG
+                                {% endif %}
+                                <br>
+                                {% if LINK_TWITTER %}
+                                    <a href="{{LINK_TWITTER}}" class="link">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-cirle fa-stack-2x"></i>
+                                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>    
+                                        </span>
+                                    </a>
+                                    #Peluqueria DG
+                                {% endif %}
+                                <br>
+                                {% if LINK_INSTAGRAM %}
+                                    <a href="{{LINK_INSTAGRAM}}" class="link">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-cirle fa-stack-2x"></i>
+                                            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>    
+                                        </span> 
+                                    </a>
+                                    @Peluqueria Dg
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt-5">
+                    <div class="card h-100 bg-dark">
+                        <div class="card-body text-white">
+                            <h5 class="card-title text-center">Horario</h5>
+                            <p class="text-center card-text">
+                                Lunes a Viernes: 10am a 10pm
+                                <br>
+                                <br>
+                                Sabado Y Domingo: 10am a 3pm
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt-5">
+                    <div class="card h-100 bg-dark">
+                        <div class="card-body text-white">
+                            <h5 class="card-title text-center">Derechos Recervados</h5>
+                            <p class="text-center card-text mt-2">
+                                Politicas de privacidad
+                                <br>
+                                Copyright
+                                <br>
+                                Politicas de empresa
+                                <br>
+                                Derechos de autor
+                                <br>
+                                Autor
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div> 
+            <!--Fin Tarjetas-->
+        </div>
+        <div class="col">
+            <div class="mt-3 text-bg-dark p-3 text-center text-white">&copy; Derechos reservados 2022 | Jordy Guadalupe Rodriguez Cebrian</div>
+        </div>
+    </footer>
+    <!--Fin footer-->
+</body>
+    <!-- Javascript -->
+    <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'core/js/main.js' %}"></script>
+</html>

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Sobre Nosotros{% endblock %}
+{% block content %}
+  <!--Inicio Quienes somos-->
+<section>
+  <div class="bg-primary">
+    <h1 class="text-center display-4" style="font-family: 'Lora';">Que es Peluqueria DG</h1>
+  </div>
+  <div class="container mt-5">
+    <div class="row m-auto">
+      <div class="col">
+        <img src="{% static 'core/img/imagen.jpg' %}" style="opacity: 0.5;" class="img-fluid text-center rounded-circle" alt="imagen">
+      </div>
+      <div class="col m-auto">
+        <p class=" d-inline-block" style="line-height: 30px; font-family: 'Lora';">
+          Somos una peluqueria especializada en coretes de todo tipo <br>
+          trabajamos con todos los estilos que el cliente quiera en su <br>
+          corte y arreglo de barba,  cortes modernos y cortes clasicos para <br>
+          para cualquier ocación, comprometiendonos con la satisfación de nuestro
+          cliente y trajando  cualquier corte que el se nos pida, nos facina el arte
+          trabajar con el pelo porque no es solo cortar cabello sino hacer arte con
+          nuestros cortes, dejando plasmado nuestro toque y estilo en cada corte.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--Peluqueros-->
+  <div class="mt-5">
+    <h1 class="text-center display-4" style="font-family: 'Lora';">Nuestros Peluqueros</h1>
+  </div>
+  <div class="container mt-5">
+    <div class="row m-auto">
+        <div class="col m-auto">
+          <h1 class="text-center">Lorena Romano</h1>
+          <p class="mt-2 d-inline-block text-center" style="line-height: 30px; font-family: 'Lora';">
+            Peluquera con 6 años de experiencia en el ambíto del arte<br>
+            preparada para servir a nuestros clientes comprometiendose<br>
+            a realizar su trabajo apasionadamente, comprometida con todo<br>
+            a lo que ama dedicarse, cada día trabajando para mejorar su<br>
+            estilo y proporcioando los mejores servicios a nuestros clientes<br>
+            nuestros cortes, dejando plasmado nuestro toque y estilo en cada corte.
+          </p>
+        </div>
+      <div class="col m-auto">
+        <img src="{% static 'core/img/peluquero.jpg' %}" class="img-fluid align-middle rounded" alt="img">
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col m-auto">
+          <img src="{% static 'core/img/peluquerodos.jpg' %}" class="img-fluid align-middle rounded" alt="img">
+        </div>
+        <div class="col m-auto">
+            <h1 class="text-center">Carlos Paramo</h1>
+            <p class="mt-2 d-inline-block text-center" style="line-height: 30px; font-family: 'Lora';">
+              Peluquera con 6 años de experiencia en el ambíto del arte<br>
+              preparada para servir a nuestros clientes comprometiendose<br>
+              a realizar su trabajo apasionadamente, comprometida con todo<br>
+              a lo que ama dedicarse, cada día trabajando para mejorar su<br>
+              estilo y proporcioando los mejores servicios a nuestros clientes<br>
+              nuestros cortes, dejando plasmado nuestro toque y estilo en cada corte.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

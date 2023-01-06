@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Citas{% endblock %}
+{% block content %}
+<section>
+    <div class="container">
+        <h1 class="text-center mt-5" style="font-weight: 800; font-family: 'Lora';">Citas Peluqueria DG</h1>
+    
+    <!--Form citas-->
+        <form action="" method="post" id="form" class="mt-5">
+            <h2 class="text-center" style="font-family: 'Lore';">No esperes más agenda tu cita</h2>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div  class="text-center">
+                <input type="submit" class="btn btn-primary btn-block" value="CONFIRMAR CITA">
+            </div>
+        </form>
+    </div>  
+</section>
+{% endblock %}
