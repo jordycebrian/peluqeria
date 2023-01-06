@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+##modelo para crear enlaces
 class Link(models.Model):
     key = models.SlugField(verbose_name="Nombre Clave", max_length=100, unique=True)
     name = models.CharField(verbose_name="Red social",

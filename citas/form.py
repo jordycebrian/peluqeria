@@ -1,8 +1,12 @@
 from django import forms
 from .models import Cita
 from django.forms import ValidationError
+
+
+#form para cita
 class CitaForm(forms.ModelForm):
 
+    #formato de campoas para cita
     class Meta:
         model = Cita
 
@@ -22,7 +26,7 @@ class CitaForm(forms.ModelForm):
 
 
 
-    #hora ya esta reservada  
+    #avisar de que la hora ya esta reservada  
     def clean_hora(self):
         hora = self.cleaned_data['hora']
         exists = Cita.objects.filter(hora=hora).exists()

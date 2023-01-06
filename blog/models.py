@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
 
 # Create your models here.
+
+#categorias del blog
 class Category(models.Model):
     name = models.CharField(verbose_name="Nombre", max_length=100)
     created = models.DateField(auto_now_add=True, verbose_name="Fecha de Creacion")
@@ -19,7 +21,7 @@ class Category(models.Model):
         return self.name
 
 
-
+#modelo para crear bogs
 class Post(models.Model):
     title = models.CharField(max_length=200, verbose_name="Titulo")
     content = RichTextField(verbose_name="Contenido")

@@ -5,6 +5,9 @@ from .form import CitaForm
 from django.urls import reverse_lazy
 
 # Create your views here.
+
+
+##Vista para citas###
 class Citas(CreateView):
     # llamando form y asignando plantilla
     form_class = CitaForm
@@ -17,7 +20,7 @@ class Citas(CreateView):
 
 
 
-    #devolviendo el formulario
+    #editando el formulario en tiempo real
     def get_form(self, form_class=None):
         form = super(Citas, self).get_form()
 
